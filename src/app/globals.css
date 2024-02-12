@@ -20,6 +20,14 @@ body {
   background-color: white;
 }
 
+input {
+  background-color: #f7fafc;
+  border-radius: 0.75rem;
+  color: #000;
+  border-color: #8898aa;
+  border-width: 2px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
