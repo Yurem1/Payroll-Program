@@ -22,6 +22,6 @@
  - 4 = $17.50 per hour
  - 5 = $20.00 per hour
 
-> -  **Tax is 10% of total pay**  
-> - **Insurance is 5% of total pay**
-> -  **Overtime is anything over 40hrs at time and a half**
+> **Tax is 10% of total pay**  
+> **Insurance is 5% of total pay**
+> **Overtime is anything over 40hrs at time and a half**
