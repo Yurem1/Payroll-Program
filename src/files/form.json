@@ -12,5 +12,17 @@
     "ssn_form": {
         "input": "Social Security Number (SSN)",
         "placeholder": "123-45-6789"
+    },
+    "shift": {
+        "input": "Shift type",
+        "placeholder": "Blue-collar"
+    },
+    "payrate": {
+        "input": "Payrate",
+        "placeholder": "0"
+    },
+    "hours": {
+        "input": "Hours worked",
+        "placeholder": "0"
     }
 }
