@@ -28,6 +28,10 @@ input {
   border-width: 2px;
 }
 
+button:hover {
+  transform: scale(.99);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
