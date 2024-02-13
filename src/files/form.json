@@ -1,6 +1,16 @@
 {
     "name_form": {
-        "name": "Name",
-        "last_name": "Last name"
+        "name": {
+            "input": "Name",
+            "placeholder": "John"
+        },
+        "last_name": {
+            "input": "Last name",
+            "placeholder": "Doe"
+        }
+    },
+    "ssn_form": {
+        "input": "Social Security Number (SSN)",
+        "placeholder": "123-45-6789"
     }
 }
