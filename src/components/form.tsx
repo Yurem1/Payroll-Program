@@ -1,13 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import InputName from '@/components/name';
 import SSNInput from '@/components/ssn';
 import Submit from '@/components/submit';
-import Data, { IForm } from '@/utility/data';
 import Payrate from '@/components/payrate';
 import Hours from '@/components/hours';
 import Shift from '@/components/shift';
+import Data, { IForm } from '@/utility/data';
 
 export default function Form(): React.JSX.Element {
 
@@ -19,8 +19,13 @@ export default function Form(): React.JSX.Element {
         } as IForm
     );
 
+
+    const handler = (event: ChangeEvent<HTMLFormElement>) => {
+        console.log(event.target.name)
+    }
+
     return (
-        <form className='bg-gray-100 rounded-xl p-3'>
+        <form name='e' className='bg-gray-100 rounded-xl p-3' onChange={handler}>
             <div className='grid grid-cols-2 gap-5 bg-grey-50'>
                 <InputName/>
                 <SSNInput/>
