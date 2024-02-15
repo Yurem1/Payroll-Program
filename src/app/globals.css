@@ -22,10 +22,15 @@ body {
 
 input {
   background-color: #f7fafc;
-  border-radius: 0.50rem;
+  height: 35px;
+  border-radius: 0.75rem;
   color: #000;
   border-color: #8898aa;
   border-width: 2px;
+}
+
+button {
+  height: 35px; 
 }
 
 button:hover {
