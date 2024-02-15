@@ -25,7 +25,7 @@ export default function Form(): React.JSX.Element {
     }
 
     return (
-        <form name='e' className='bg-gray-100 rounded-xl p-3' onChange={handler}>
+        <form className='bg-gray-100 rounded-xl border-black border p-5' onChange={handler}>
             <div className='grid grid-cols-2 gap-5 bg-grey-50'>
                 <InputName/>
                 <SSNInput/>
