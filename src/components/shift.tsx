@@ -5,7 +5,7 @@ const Shift = React.forwardRef(function Shift(props, ref) {
         <fieldset>
             <div className='flex flex-col'>
                 <label>Shift type</label>
-                <input name='Shift' type='text' placeholder='Blue-collar'/>
+                <input name='Shift' type='text' placeholder='Evening shift'/>
             </div>
         </fieldset>
     );
