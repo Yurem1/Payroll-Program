@@ -1,28 +1,28 @@
 {
     "name_form": {
         "name": {
-            "input": "Name",
+            "input": "name",
             "placeholder": "John"
         },
         "last_name": {
-            "input": "Last name",
+            "input": "lastName",
             "placeholder": "Doe"
         }
     },
     "ssn_form": {
-        "input": "Social Security Number (SSN)",
+        "input": "ssn",
         "placeholder": "123-45-6789"
     },
     "shift": {
-        "input": "Shift type",
+        "input": "shift",
         "placeholder": "Blue-collar"
     },
     "payrate": {
-        "input": "Payrate",
+        "input": "payrate",
         "placeholder": "0"
     },
     "hours": {
-        "input": "Hours worked",
+        "input": "hours",
         "placeholder": "0"
     }
 }
