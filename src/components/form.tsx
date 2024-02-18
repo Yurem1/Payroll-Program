@@ -29,7 +29,7 @@ export default function Form(): React.JSX.Element {
 
     return (
         <form className='bg-gray-100 rounded-xl border-black border p-5' onChange={formHandler}>
-            <div className='grid grid-cols-2 gap-5 bg-grey-50'>
+            <div className='grid grid-cols-2 gap-5'>
                 <InputName/>
                 <SSNInput/>
                 <Shift/>
