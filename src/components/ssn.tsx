@@ -11,7 +11,8 @@ const SSNInput = React.forwardRef(function SSNInput(props, ref) {
         <fieldset>
             <div className='flex flex-col'>
                 <label>Social Security Number (SSN)</label>
-                <input name='ssn' type='text' pattern='\d{3}-\d{2}-\d{4}' placeholder='123-45-6789'/>
+                <input name='ssn' type='text' pattern='\d{3}-\d{2}-\d{4}' placeholder='123-45-6789'
+                required/>
             </div>
         </fieldset>
     );
