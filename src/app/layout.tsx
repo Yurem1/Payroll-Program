@@ -16,7 +16,7 @@ interface IRootLayout {
 export default function RootLayout({children}: IRootLayout) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex flex-col items-center justify-center h-screen bg-gray-50`}>{children}</body>
     </html>
   );
 }
