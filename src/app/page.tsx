@@ -1,8 +1,10 @@
-import Form from "@/components/form";
+'use client';
+
+import Form from "@/app/form";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen bg-gray-50">
+    <main>
       <Form/>
     </main>
   );
