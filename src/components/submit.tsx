@@ -1,5 +1,7 @@
-import React from 'react';
+'use client';
 
+import React from 'react';
+import { useRouter } from 'next/navigation';
 /**
  * A submit button component.
  *
@@ -9,10 +11,12 @@ import React from 'react';
  * @returns {JSX.Element} The rendered Submit component.
  */
 const Submit = React.forwardRef(function Submit(props, ref) {
+
     return (
         <fieldset className='col-span-2'>
             <div className='flex flex-col'>
-                <button className='rounded-xl bg-gray-200 border-black border-2' type='submit'>Submit</button>
+                <button className='rounded-xl bg-gray-200 border-black border-2' 
+                type='submit'>Submit</button>
             </div>
         </fieldset>
     );
