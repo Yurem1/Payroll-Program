@@ -44,7 +44,7 @@ export default class Data {
                 if(stateKey === actionKey) {
                     return {
                         ...state, ...action
-                    }
+                    };
                 }
             }
         }
@@ -65,6 +65,22 @@ export default class Data {
             }
         }
         
-        return 0
+        return 0;
+    }
+
+    /**
+     * Calculates the pay rate based on the provided form data.
+     * @param {IForm} formData - The form data containing the pay rate and hours worked.
+     * @returns {number} - The calculated pay rate.
+     */
+    public static calculatePayrate({payRate, hoursWorked}: IForm): number {
+
+        for(const [key, { rate }] of Object.entries(PAYRATE)) {
+            if(key === payRate.toString()) {
+                return (rate * hoursWorked) - (rate * hoursWorked * .15);
+            }
+        }
+
+        return 0;
     }
 }
