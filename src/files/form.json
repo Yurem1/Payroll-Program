@@ -15,7 +15,14 @@
     },
     "shift": {
         "input": "shift",
-        "placeholder": "Blue-collar"
+        "placeholder": "Blue-collar",
+        "options": {
+            "option_1": "First Shift",
+            "option_2": "Second Shift",
+            "option_3": "Third Shift",
+            "option_4": "Standard Shift",
+            "option_5": "Fixed Shift"
+        }
     },
     "payrate": {
         "input": "payrate",
