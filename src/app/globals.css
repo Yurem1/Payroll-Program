@@ -20,13 +20,17 @@ body {
   background-color: white;
 }
 
-input {
+input, select {
   background-color: #f7fafc;
   height: 35px;
   border-radius: 0.75rem;
   color: #000;
   border-color: #8898aa;
   border-width: 2px;
+}
+
+h1 {
+  font-weight: bold;
 }
 
 button {
