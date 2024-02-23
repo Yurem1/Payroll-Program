@@ -1,5 +1,6 @@
 import React from 'react';
 import { shift as SHIFT } from '@/files/form.json';
+
 /**
  * Represents a Shift component.
  * @param {object} props - The props for the Shift component.
@@ -11,7 +12,7 @@ const Shift = React.forwardRef(function Shift(props, ref) {
     function displayShiftOptions(): React.JSX.Element[] {
         return Object.entries(SHIFT.options).map(([key, value]) => {
             return (
-                <option key={key} value={key}>
+                <option key={key} value={value}>
                     {value}
                 </option>
             );
@@ -21,8 +22,9 @@ const Shift = React.forwardRef(function Shift(props, ref) {
     return (
         <fieldset>
             <div className='flex flex-col'>
-                <label>Choose shift</label>
+                <label>Choose Shift</label>
                 <select name='shift' required>
+                    <option>-Select Shift Type-</option>
                     {displayShiftOptions()}
                 </select>
             </div>
