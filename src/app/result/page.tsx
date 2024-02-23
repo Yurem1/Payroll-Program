@@ -1,35 +1,24 @@
-'use client';
-
-import { useSearchParams } from 'next/navigation';
-import Data from '@/utility/data';
+import Data, { IForm } from '@/utility/data';
 import React from 'react';
 
 /**
- * Renders the page component for displaying payroll information.
- * @returns The JSX element representing the page.
+ * Renders the result page with the provided search parameters.
+ * @param searchParams - The search parameters.
+ * @returns A Promise that resolves to the JSX element representing the result page.
  */
-export default function Page(): React.JSX.Element {
-    const search = useSearchParams()
-
-    const [state, setState] = React.useState(Data.DEFAULT_DATA);
-
-    React.useEffect(() => {
-        search.forEach((value, key) => {
-            setState((prev) => ({
-                ...prev,
-                [key]: value
-            }));
-        });
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
+export default async function Page({
+    searchParams: {
+        name, lastName, ssn, shift, payRate, hoursWorked
+    }}: {
+    searchParams: IForm
+}): Promise<React.JSX.Element> {
+    
     /**
      * Retrieves the pay rate based on the state.
      * @returns The pay rate.
      */
     function getPayRate(): number {
-        return Data.findPayrate(state.payRate.toString());
+        return Data.findPayrate(payRate.toString());
     }
 
     /**
@@ -37,7 +26,10 @@ export default function Page(): React.JSX.Element {
      * @returns The weekly rate.
      */
     function calculateWeeklyRate(): number {
-        return Data.calculatePayrate(state);
+        return Data.calculatePayrate({
+            payRate, 
+            hoursWorked
+        });
     }
 
     /**
@@ -45,11 +37,7 @@ export default function Page(): React.JSX.Element {
      * @returns A string indicating if overtime is applicable.
      */
     function checkOvertime(): string {
-        if (state.hoursWorked < 1) {
-            return 'No data';
-        }
-
-        return state.hoursWorked > 42.4 ? 'True' : 'False';
+        return hoursWorked > 42.4 ? 'True' : 'False';
     }
 
     return (
@@ -58,25 +46,25 @@ export default function Page(): React.JSX.Element {
                 <div>
                     <div>
                         <h1>Name</h1>
-                        <p>{state.name}</p>
+                        <p>{name}</p>
                     </div>
                 </div>
                 <div>
                     <div>
                         <h1>Last Name</h1> 
-                        <p>{state.lastName}</p>
+                        <p>{lastName}</p>
                     </div>
                 </div>
                 <div>
                     <div>
                         <h1>Social Security</h1>
-                        <p>{state.ssn}</p>
+                        <p>{ssn}</p>
                     </div>
                 </div>
                 <div>
                     <div>
                         <h1>Shift</h1>
-                        <p>{state.shift}</p>
+                        <p>{shift}</p>
                     </div>
                 </div>
                 <div>
@@ -88,7 +76,7 @@ export default function Page(): React.JSX.Element {
                 <div>
                     <div>
                         <h1>Hours Worked</h1>
-                        <p>{state.hoursWorked}</p>
+                        <p>{hoursWorked}</p>
                     </div>
                 </div>
                 <div>
