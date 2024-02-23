@@ -18,7 +18,7 @@ export interface IForm {
  * @interface IAction
  */
 interface IAction {
-    [key: string]: string
+    [key: string]: string;
 }
 
 /**
@@ -49,7 +49,7 @@ export default class Data {
             }
         }
 
-        return state
+        return state;
     }
 
     /**
@@ -82,5 +82,11 @@ export default class Data {
         }
 
         return 0;
+    }
+
+    public static capitalize(value: string): string {
+        return value[0].toLocaleUpperCase().concat(
+            value.substring(1)
+        );
     }
 }
