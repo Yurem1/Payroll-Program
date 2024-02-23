@@ -24,7 +24,6 @@ const Shift = React.forwardRef(function Shift(props, ref) {
             <div className='flex flex-col'>
                 <label>Choose Shift</label>
                 <select name='shift' required>
-                    <option>-Select Shift Type-</option>
                     {displayShiftOptions()}
                 </select>
             </div>
