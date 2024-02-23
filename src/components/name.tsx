@@ -18,9 +18,9 @@ const InputName = React.forwardRef(function InputName(props, ref) {
             return (
                 <fieldset key={key}>
                     <div className='flex flex-col'>
-                        <label>{value.input}</label>
+                        <label>{value.label}</label>
                         <input name={value.input} type='text' placeholder={value.placeholder}
-                        required/>
+                        required maxLength={12}/>
                     </div>
                 </fieldset>
             );
