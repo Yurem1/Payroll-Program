@@ -25,3 +25,6 @@
 > **Tax is 10% of total pay**  
 > **Insurance is 5% of total pay**  
 > **Overtime is anything over 40hrs at time and a half**
+
+### Preview: 
+![Untitled video - Made with Clipchamp (1)](https://github.com/Yurem1/Payroll-Program/assets/142750684/0f1613bf-7319-4582-b22a-e0a3a73fa4b6)
