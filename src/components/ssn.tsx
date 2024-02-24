@@ -1,12 +1,10 @@
 import React from 'react';
 
 /**
- * A component that renders an input field for Social Security Number (SSN).
- * @param props - The component props.
- * @param ref - The ref to be forwarded to the input element.
- * @returns The rendered SSNInput component.
+ * Renders an input field for Social Security Number (SSN).
+ * @returns {React.JSX.Element} The JSX element representing the SSN input field.
  */
-const SSNInput = React.forwardRef(function SSNInput(props, ref) {
+export default function SSNInput(): React.JSX.Element {
     return (
         <fieldset>
             <div className='flex flex-col'>
@@ -16,6 +14,4 @@ const SSNInput = React.forwardRef(function SSNInput(props, ref) {
             </div>
         </fieldset>
     );
-});
-
-export default SSNInput;
+};
