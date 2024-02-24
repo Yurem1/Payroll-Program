@@ -1,17 +1,10 @@
-'use client';
-
 import React from 'react';
 
 /**
  * A submit button component.
- *
- * @component
- * @param {object} props - The props for the Submit component.
- * @param {React.Ref} ref - The ref to attach to the Submit component.
- * @returns {JSX.Element} The rendered Submit component.
+ * @returns {React.JSX.Element} The rendered Submit component.
  */
-const Submit = React.forwardRef(function Submit(props, ref) {
-
+export default function Submit(): React.JSX.Element {
     return (
         <fieldset className='col-span-2'>
             <div className='flex flex-col'>
@@ -20,6 +13,4 @@ const Submit = React.forwardRef(function Submit(props, ref) {
             </div>
         </fieldset>
     );
-});
-
-export default Submit;
+};
