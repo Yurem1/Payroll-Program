@@ -2,11 +2,9 @@ import React from 'react';
 
 /**
  * Renders a component for entering hours worked.
- * @param {object} props - The component props.
- * @param {React.Ref} ref - The ref object.
- * @returns {React.ReactNode} The rendered component.
+ * @returns {React.JSX.Element} The rendered component.
  */
-const Hours = React.forwardRef(function Hours(props, ref) {
+export default function Hours(): React.JSX.Element {
     return (
         <fieldset>
             <div className='flex flex-col'>
@@ -16,6 +14,4 @@ const Hours = React.forwardRef(function Hours(props, ref) {
             </div>
         </fieldset>
     );
-});
-
-export default Hours;
+};
