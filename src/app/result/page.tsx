@@ -6,19 +6,23 @@ import React from 'react';
  * @param searchParams - The search parameters.
  * @returns A Promise that resolves to the JSX element representing the result page.
  */
-export default async function Page({
-    searchParams: {
-        name, lastName, ssn, shift, payRate, hoursWorked
-    }}: {
-    searchParams: IForm
-}): Promise<React.JSX.Element> {
+export default function Page({ searchParams } : {searchParams: IForm}): React.JSX.Element {
+    
+    const { 
+        name, 
+        lastName, 
+        ssn, 
+        shift, 
+        payRate, 
+        hoursWorked
+    } = searchParams;
     
     /**
      * Retrieves the pay rate based on the state.
      * @returns The pay rate.
      */
     function getPayRate(): number {
-        return Data.findPayrate(payRate.toString());
+        return Data.findPayrate(`${payRate}`);
     }
 
     /**
@@ -27,8 +31,8 @@ export default async function Page({
      */
     function calculateWeeklyRate(): number {
         return Data.calculatePayrate({
-            payRate, 
-            hoursWorked
+            payrate: payRate,
+            hours: hoursWorked,
         });
     }
 
@@ -51,7 +55,7 @@ export default async function Page({
                 </div>
                 <div>
                     <div>
-                        <h1>Last Name</h1> 
+                        <h1>Last Name</h1>
                         <p>{lastName}</p>
                     </div>
                 </div>
@@ -69,14 +73,14 @@ export default async function Page({
                 </div>
                 <div>
                     <div>
-                        <h1>Hourly rate</h1>
-                        <p>${getPayRate()}/hr</p>
+                        <h1>Hours Worked</h1>
+                        <p>{hoursWorked}</p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <h1>Hours Worked</h1>
-                        <p>{hoursWorked}</p>
+                        <h1>Hourly rate</h1>
+                        <p>${getPayRate()}/hr</p>
                     </div>
                 </div>
                 <div>
