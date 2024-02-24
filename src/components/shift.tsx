@@ -3,11 +3,9 @@ import { shift as SHIFT } from '@/files/form.json';
 
 /**
  * Represents a Shift component.
- * @param {object} props - The props for the Shift component.
- * @param {React.Ref} ref - The ref for the Shift component.
  * @returns {JSX.Element} The rendered Shift component.
  */
-const Shift = React.forwardRef(function Shift(props, ref) {
+export default function Shift(): React.JSX.Element {
     
     function displayShiftOptions(): React.JSX.Element[] {
         return Object.entries(SHIFT.options).map(([key, value]) => {
@@ -29,6 +27,4 @@ const Shift = React.forwardRef(function Shift(props, ref) {
             </div>
         </fieldset>
     );
-});
-
-export default Shift;
+};
