@@ -2,11 +2,9 @@ import React from 'react';
 
 /**
  * Represents the Payrate component.
- * @param {object} props - The component props.
- * @param {React.Ref} ref - The ref object.
  * @returns {JSX.Element} The rendered Payrate component.
  */
-const Payrate = React.forwardRef(function Payrate(props, ref) {
+export default function Payrate(): React.JSX.Element {
     return (
         <fieldset>
             <div className='flex flex-col'>
@@ -16,6 +14,4 @@ const Payrate = React.forwardRef(function Payrate(props, ref) {
             </div>
         </fieldset>
     );
-});
-
-export default Payrate;
+}
