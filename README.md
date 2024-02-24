@@ -31,3 +31,4 @@
 
    *[Link to website](https://payroll-program-af0acf41deb2.herokuapp.com/)*
 
+note: this is not an official submission, this is purely done for enjoyment and practice for real SkillsUSA competitions
