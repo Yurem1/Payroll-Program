@@ -27,4 +27,4 @@
 > **Overtime is anything over 40hrs at time and a half**
 
 ### Preview: 
-![Untitled video - Made with Clipchamp (1)](https://github.com/Yurem1/Payroll-Program/assets/142750684/0f1613bf-7319-4582-b22a-e0a3a73fa4b6)
+![Untitled video - Made with Clipchamp (2)](https://github.com/Yurem1/Payroll-Program/assets/142750684/4b19bca3-f332-49a3-aa51-579ab95cd241)
