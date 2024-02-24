@@ -3,6 +3,7 @@ import { DEFAULT_FORM_DATA } from '@/utility/constants';
 
 /**
  * Represents the form data for an employee.
+ * @interface IForm
  */
 export interface IForm {
     name: string;
@@ -11,6 +12,15 @@ export interface IForm {
     hoursWorked: number;
     payRate: number;
     shift: string;
+}
+
+/**
+ * Represents the pay rate and hours for an employee.
+ * @interface IPayrate
+ */
+interface IPayrate {
+    payrate: number;
+    hours: number;
 }
 
 /**
@@ -32,10 +42,16 @@ export default class Data {
     public static readonly DEFAULT_DATA = DEFAULT_FORM_DATA;
 
     /**
+     * The pay deduction percentage.
+     */
+    public static readonly PAY_DEDUCTION = .15
+
+    /**
      * Reducer function for updating the form state based on the action.
      * @param state - The current form state.
      * @param action - The action to be performed on the form state.
      * @returns The updated form state.
+     * @deprecated No longer useful in this project
      */
     public static reducer(state: IForm, action: IAction): IForm {
 
@@ -54,7 +70,7 @@ export default class Data {
 
     /**
      * Finds the payrate based on the given payrate key.
-     * @param payrate - The payrate key.
+     * @param payrate - The payrate value.
      * @returns The corresponding payrate value.
      */
     public static findPayrate(payrate: string): number {
@@ -69,21 +85,27 @@ export default class Data {
     }
 
     /**
-     * Calculates the pay rate based on the provided form data.
-     * @param {IForm} formData - The form data containing the pay rate and hours worked.
-     * @returns {number} - The calculated pay rate.
+     * Calculates the payrate based on the given rate and hours.
+     * @param rate - The hourly rate from 1-5.
+     * @param hours - The number of hours worked.
+     * @returns The calculated payrate.
      */
-    public static calculatePayrate({payRate, hoursWorked}: IForm): number {
-
+    public static calculatePayrate({payrate, hours}: IPayrate): number {
+        
         for(const [key, { rate }] of Object.entries(PAYRATE)) {
-            if(key === payRate.toString()) {
-                return (rate * hoursWorked) - (rate * hoursWorked * .15);
+            if(key === payrate.toString()) {
+                return (rate * hours) - (rate * hours) * Data.PAY_DEDUCTION;
             }
         }
 
         return 0;
     }
 
+    /**
+     * Capitalizes the first letter of a string.
+     * @param value - The string to capitalize.
+     * @returns The capitalized string.
+     */
     public static capitalize(value: string): string {
         return value[0].toLocaleUpperCase().concat(
             value.substring(1)
