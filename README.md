@@ -34,6 +34,6 @@
 ### Preview: 
 ![Untitled video - Made with Clipchamp (2)](https://github.com/Yurem1/Payroll-Program/assets/142750684/4b19bca3-f332-49a3-aa51-579ab95cd241)
 
-   *[Link to website](https://payroll-program-af0acf41deb2.herokuapp.com/)*
+### *[Link to website](https://payroll-program-portfolio-ad8475462613.herokuapp.com/)*
 
 note: this is not an official submission, this is purely done for enjoyment and practice for real SkillsUSA competitions
